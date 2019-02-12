@@ -3,14 +3,14 @@
 wget http://mirrors.shu.edu.cn/apache//apr/apr-1.6.5.tar.gz
 tar xvf apr-1.6.5.tar.gz
 cd apr-1.6.5/
-./configure 
+./configure
 sudo make
 sudo make install
 ```
 #  step2: install apr-util
 ```bash
 wget http://mirrors.shu.edu.cn/apache//apr/apr-util-1.6.1.tar.gz
-tar xvf apr-util-1.6.1.tar.gz 
+tar xvf apr-util-1.6.1.tar.gz
 cd apr-util-1.6.1/
 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
 sudo make
@@ -25,7 +25,7 @@ sudo apt-get install zlib1g-dev
 # step4: install apache
  ```bash
  wget http://mirrors.tuna.tsinghua.edu.cn/apache/httpd/httpd-2.4.38.tar.gz
- tar xvf httpd-2.4.38.tar.gz 
+ tar xvf httpd-2.4.38.tar.gz
  cd httpd-2.4.38/
 ./configure \
 --with-apr-util=/usr/local/apr-util \
@@ -39,7 +39,7 @@ sudo apt-get install zlib1g-dev
 --with-pcre \
 --with-mpm=prefork \
 --enable-modules=most \
---enable-mpms-shared=all 
+--enable-mpms-shared=all
 sudo make
 sudo make install
 ```
@@ -49,9 +49,10 @@ sudo make install
 
 ```bash
 cd /etc/httpd2.4.38
-sudo nano httpd.conf 
+sudo nano httpd.conf
 ```
-uncommt proxy and proxy_uwsgi to enable uwsgi 
+uncommt proxy and proxy_uwsgi to enable uwsgi
+
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_uwsgi_module modules/mod_proxy_uwsgi.so
 
@@ -149,7 +150,8 @@ run uwsgi
 ./uwsgi --socket 127.0.0.1:9199 --wsgi-file ./webq.py --callable wsgi_app --master --processes 4
 ```
 
-#　issues
+#　问题
+
 can not use 3031 as uwsgi 's default port。
 
 # links
