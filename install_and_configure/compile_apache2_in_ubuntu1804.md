@@ -48,14 +48,13 @@ sudo make install
 ##　configure
 
 ```bash
-cd /etc/httpd2.4.38
-sudo nano httpd.conf
+cd /etc/httpd2.4.38  
+sudo nano httpd.conf  
 ```
-uncommt proxy and proxy_uwsgi to enable uwsgi　　
-LoadModule proxy_module modules/mod_proxy.so　　
-LoadModule proxy_uwsgi_module modules/mod_proxy_uwsgi.so　　
-
+uncommt proxy and proxy_uwsgi to enable uwsgi  
+LoadModule proxy_module modules/mod_proxy.so  
+LoadModule proxy_uwsgi_module modules/mod_proxy_uwsgi.so  
 ## run
-cd /usr/local/httpd2.4.38/bin
-sudo ./apachectl start
+cd /usr/local/httpd2.4.38/bin  
+sudo ./apachectl start  
 
