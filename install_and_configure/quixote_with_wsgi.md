@@ -6,10 +6,10 @@ cd  uwsgi-2.0.18/
 make
 ```
 
-# add fair1.conf for apache
+# add web.conf for apache
 
 ```bash
-sudo nano /etc/httpd2.4.38/extra/fair1.conf
+sudo nano /etc/httpd2.4.38/extra/web.conf
 ```
 
 fair1.conf
@@ -85,7 +85,7 @@ wsgi_app = quixote.get_wsgi_app()
 # run applications
 ```bash
 #use simple function
-./uwsgi --socket 127.0.0.1:9199 --plugin python2 --wsgi-file ./web.py
+./uwsgi --socket 127.0.0.1:9199 --wsgi-file ./web.py
 #use quixote
 ./uwsgi --socket 127.0.0.1:9199 --wsgi-file ./webq.py --callable wsgi_app --master --processes 4
 ```
