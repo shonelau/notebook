@@ -43,7 +43,7 @@ def application(env, start_response):
 
 # add a quixote application with wsgi interface
 
-webq.py 
+webq.py  
 ``` python
 #!/usr/bin/env python
 """
@@ -90,7 +90,7 @@ wsgi_app = quixote.get_wsgi_app()
 ./uwsgi --socket 127.0.0.1:9199 --wsgi-file ./webq.py --callable wsgi_app --master --processes 4
 ```
 
-# issues
+# 问题
 can not use 3031 as uwsgi 's default port。
 
 # links
