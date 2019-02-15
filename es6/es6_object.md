@@ -202,7 +202,7 @@ Object.getOwnPropertyDescriptor(obj, 'foo')
 描述对象的enumerable属性，称为”可枚举性“，如果该属性为false，就表示某些操作会忽略当前属性。  
 引入enumerable的最初目的，就是让某些属性可以规避掉for...in操作。
 
-## 属性的遍历
+## 属性的遍历(常用且重要)
 ES6一共有5种方法可以遍历对象的属性。
 
 1. for...in
