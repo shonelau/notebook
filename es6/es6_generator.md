@@ -628,3 +628,4 @@ scheduler(longRunningTask(initialValue));
 
 ### 作为数据结构
 
+更多详细内容，请参见参考链接。
